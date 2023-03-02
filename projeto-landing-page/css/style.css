@@ -1,0 +1,76 @@
+/* import da fonte */
+
+@font-face {
+    font-family: "bebas";
+    src: url(../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+
+/* reset de página */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* colocado o grid para alinhamento da página */
+
+.layout-grid {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 5px solid red;
+}
+
+
+/* colocada a cor de fundo e altura da caixa */
+
+header {
+    background-color: #f9003d;
+    height: 60px;
+}
+
+
+/* colocada a centralização da nav bar */
+
+header .header-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* colocada a borda na nav */
+
+header nav {
+    width: 600px;
+    font-family: bebas;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header nav a {}
+
+
+/* colocada a fonte dos links e espaçamento */
+
+header nav a:hover {
+    background-color: white;
+    color: #f9003d;
+}
+
+main .banner {
+    width: 100%;
+    height: 740px;
+    background-color: black;
+}

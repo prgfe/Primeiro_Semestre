@@ -22,7 +22,6 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border: 5px solid red;
 }
 
 
@@ -31,6 +30,7 @@
 header {
     background-color: #f9003d;
     height: 60px;
+    width: 100%;
 }
 
 
@@ -42,24 +42,23 @@ header .header-flex {
     align-items: center;
 }
 
-.nav-flex {
-    display: flex;
-    justify-content: space-between;
-}
-
 
 /* colocada a borda na nav */
 
 header nav {
     width: 600px;
-    font-family: bebas;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
 }
 
-header nav a {}
+header nav a {
+    font-family: "bebas";
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
 
 
 /* colocada a fonte dos links e espaçamento */
@@ -69,8 +68,40 @@ header nav a:hover {
     color: #f9003d;
 }
 
+
+/* colocada cor de fundo e altura e largura do banner */
+
 main .banner {
     width: 100%;
     height: 740px;
-    background-color: black;
+    background-color: white;
+    background-image: url(../assets/images/imagem-fundo-banner\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+main .banner-flex {
+    display: flex;
+    align-items: center;
+}
+
+main .banner #bannerinfo {
+    width: 550px;
+    /* border: 2px solid yellow; */
+}
+
+main .banner #bannerinfo h1 {
+    color: white;
+    font-family: bebas;
+    font-size: 96px;
+    border-bottom: 2px solid #ffaf00;
+}
+
+main .banner #bannerinfo p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 53px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f9003d;
 }

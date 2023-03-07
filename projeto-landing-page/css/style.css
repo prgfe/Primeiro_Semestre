@@ -13,6 +13,11 @@
     box-sizing: border-box;
 }
 
+/* Desktop First */
+/* esconde o ícone do  menu hamburguer */
+header #menu-hamburguer {
+    display: none;
+}
 /* Sobre */
 
 .sobre {
@@ -90,7 +95,6 @@ header {
     width: 100%;
 }
 
-
 /* colocada a centralização da nav bar */
 
 header .header-flex {
@@ -98,7 +102,6 @@ header .header-flex {
     justify-content: flex-end;
     align-items: center;
 }
-
 
 /* colocada a borda na nav */
 
@@ -117,14 +120,12 @@ header nav a {
     text-transform: lowercase;
 }
 
-
 /* colocada a fonte dos links e espaçamento */
 
 header nav a:hover {
     background-color: white;
     color: #f9003d;
 }
-
 
 /* colocada cor de fundo e altura e largura do banner */
 
@@ -161,4 +162,39 @@ main .banner #bannerinfo p {
     font-weight: bold;
     text-transform: uppercase;
     color: #f9003d;
+}
+
+/* smartphone */
+@media screen and (max-width: 767px) {
+    main {
+        display: none;
+    }
+}
+header nav {
+    display: none;
+}
+
+/* esconde o icone de barras */
+header #menu-hamburguer {
+    display: block;
+}
+header nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vh;
+    max-width: 360px;
+    height: 100vh;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9003d;
+}
+
+header nav a {
+    width:  150px;
+    margin-bottom: 30px;
+    border-left: 2px dashed white;
+    border-radius: 0;
 }

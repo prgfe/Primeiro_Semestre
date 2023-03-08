@@ -5,6 +5,11 @@
     src: url(../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
 }
 
+@font-face {
+    font-family: "sans" ;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+
 /* reset de página */
 
 * {
@@ -18,64 +23,11 @@
 header #menu-hamburguer {
     display: none;
 }
-/* Sobre */
 
-.sobre {
-    padding: 60px 0;
-}
-
-.sobre .sobre-flex {
-    display: flex;
-    justify-content: space-between;
-    /* border: 2px solid red; */
-}
-
-.sobre .sobre-flex .sobrebox {
-    width: 500px;
-    /* border: 2px solid red; */
-}
-
-.sobre .sobre-flex .sobrebox  h2 {
-    margin-bottom: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    /* font-family: bebas; colocar! */
-    font-size: 64px;
-    color: #f9003d;
-    /* border: 2px solid red; */
-}
-
-.sobre .sobre-flex .participantes {
-    width: 640px;
-    /* border: 2px solid red; */
-}
-
-.sobre .sobre-flex .participantes h3 {
-    margin-bottom: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 24px;
-    /* border: 2px solid red; */
-}
-
-.sobre .sobre-flex .participantes h4 {
-    margin-bottom: 20px;
-    /* font-family: bebas; */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 64px;
-    color: #ffaf00;
-    /* border: 2px solid red; */
-}
-
-.sobre .sobre-flex .participantes p {
-    font-size: 18px;
-    line-height: 28px;
-    text-align: justify;
-}
 
 /* colocado o grid para alinhamento da página */
 
 .layout-grid {
-    height: 100%;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -92,7 +44,6 @@ body {
 header {
     background-color: #f9003d;
     height: 60px;
-    width: 100%;
 }
 
 /* colocada a centralização da nav bar */
@@ -100,14 +51,15 @@ header {
 header .header-flex {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: stretch;
+    height: 100%;
 }
 
 /* colocada a borda na nav */
 
 header nav {
-    width: 600px;
-    padding: 15px 25px;
+    width: 500px;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
@@ -117,7 +69,11 @@ header nav a {
     text-decoration: none;
     color: white;
     letter-spacing: 2px;
-    text-transform: lowercase;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-shadow: 2px 2px 20px black;
+    padding: 15px 20px;
+    border-radius: 5px;
 }
 
 /* colocada a fonte dos links e espaçamento */
@@ -125,12 +81,14 @@ header nav a {
 header nav a:hover {
     background-color: white;
     color: #f9003d;
+    text-shadow: 0px 0px 5px rgba(249,0,61, 0.3);
 }
 
 /* colocada cor de fundo e altura e largura do banner */
 
+/* MAIN */
+
 main .banner {
-    width: 100%;
     height: 740px;
     background-color: white;
     background-image: url(../assets/images/imagem-fundo-banner\ 1.png);
@@ -142,27 +100,74 @@ main .banner {
 main .banner-flex {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 main .banner #bannerinfo {
-    width: 550px;
-    /* border: 2px solid yellow; */
+    width: 560px;
 }
 
-main .banner #bannerinfo h1 {
-    color: white;
-    font-family: bebas;
+main .banner #bannerinfo img .imagem-fundo-banner {
+    width: 100%;
+}
+
+main .banner-flex h1 {
+    margin-bottom: 40px;
+    font-family: "bebas";
     font-size: 96px;
-    border-bottom: 2px solid #ffaf00;
+    color: white;
 }
 
-main .banner #bannerinfo p {
+main .banner-flex p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 53px;
     font-weight: bold;
     text-transform: uppercase;
     color: #f9003d;
+    margin-bottom: 40px;
 }
+
+/* Sobre */
+
+main .sobre {
+    padding: 40px 60px 0;
+}
+
+main .sobre h2 {
+    display: flex;
+    justify-content: space-between;
+    font-family: "bebas";
+    font-size: 64px;
+    color: #f9003d;
+}
+
+main .sobre .linha {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .sobre .linha img {
+    width: 490px;
+}
+
+main .sobre .linha .participantes h3 {
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+main .sobre .participantes h4 {
+    margin-bottom: 20px;
+    font-family: "bebas";
+    font-size: 64px;
+    color: #ffaf00;
+}
+
+main .sobre .linha .participantes p {
+    font-family: "sans";
+    font-weight: 400;
+    font-size: 18px;
 
 /* smartphone */
 @media screen and (max-width: 767px) {
@@ -175,6 +180,7 @@ header nav {
 }
 
 /* esconde o icone de barras */
+
 header #menu-hamburguer {
     display: block;
 }

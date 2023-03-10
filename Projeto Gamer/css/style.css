@@ -7,99 +7,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* CLASSES GENÉRICAS */
+
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid salmon;
+}
+
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 body {
     color: white;
 }
 
+/* MOBILE FIRST */
+
 /* HEADER */
 header {
     background-color: #1b1426;
-    /* border: solid 2px red; */
-}
-
-header .layout-grid {
-    display: flex;
-    flex-direction: column;
-    /* border: solid 2px green; */
-    padding: 5px 100px;
+    height: 60px;
 }
 
 header .header-top {
-    display: flex;
-    justify-content: space-between;
-    /* border: solid 3px blue; */
-}
-
-header .header-top .contatos {
-    /* border: solid 3px white; */
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-}
-
-header .header-top .contatos .phone {
-    /* border: solid 3px yellow; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 150px;    
-}
-
-header .header-top .contatos .phone .numero {
-    /* border: solid 3px red; */
-    display: flex; 
-}
-
-header .header-top .contatos .mail {
-    /* border: solid 3px yellow; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        width: 210px;
-}
-
-header .header-top .midias-sociais {
-    /* border: solid 2px red; */
-    display: flex;
-    align-content: space-around ;
-    width: 120px;        
-}
-
-header .header-top .midias-sociais a {
-    /* border: solid 2px green; */
-    width: 120px;
-    display: flex;
-    justify-content: space-between;
-}
-
-header .header-bottom img {
-    border: solid 2px red;
+    display: none;
 }
 
 header .header-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border: solid 3px blue; */
+    height: 60px;
 }
 
-header .header-bottom .menu {
-    /* border: solid 2px green; */
-    /* background-color: white; */
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
+header .logo {
+    width: 86px;
 }
 
-header .header-bottom .menu a {
-    text-decoration: none;
-    color: white;
+header nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
 }
 
-header .header-bottom .user-nav {
-    border: solid 2px green;
-    width: 200px;
-    display: flex;
-    align-content: space-evenly ;
+header .user-nav {
+    display: none;
 }

@@ -1,7 +1,7 @@
 /* Imports de fonts */
     @font-face {
-        font-family: ;
-        src: url();
+        font-family:"Inter" ;
+        src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
     }
 /* Reset CSS */
 
@@ -69,7 +69,7 @@ header nav .menu-flex {
     /* border: 1px solid yellow; */
     position: fixed;
     top: 60px;
-    left: -70vw;
+    left: 70vw;
     width: 70vw;
     height: 90vh;
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0,7), rgba(27, 20, 38, 0,4));
@@ -141,7 +141,7 @@ header .header-bottom .user-nav {
     justify-content: space-around;
     position: fixed;
     top: 60px;
-    right: -66px;
+    right: 0px;
     background-color: grey;
     background-image: linear-gradient(grey, rgb(189, 188, 188));
     width: 66px;

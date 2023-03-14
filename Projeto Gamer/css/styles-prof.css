@@ -19,6 +19,14 @@
     /* border: 1px solid salmon; */
 }
 
+.mostrar-menu {
+    left: 0 !important;
+}
+
+.mostrar-user {
+    right: 0 !important;
+}
+
 /* justify content + align items */
 .alinhamento-between-center {
     display: flex;
@@ -35,7 +43,10 @@ body {
 
 /* HEADER */
 header {
+    position: fixed;
+    width: 100vw;
     height: 60px;
+    z-index: 100;
     background-color: #1B1426;
 }
 
@@ -51,19 +62,24 @@ header .logo {
     width: 86px;
 }
 
+
 header .header-bottom nav {
     position: fixed;
     top: 60px;
-    left: 0;
-    width: 80vw;
-    height: calc(100vh - 60px);
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
+    left: -80vw;
+    z-index: 101;
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
+    width: 80vw;
+    height: calc(100vh - 60px);
     padding-bottom: 20px;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: left 0.4s;
 }
+
 
 header .header-bottom nav > a {
     display: flex;
@@ -75,7 +91,6 @@ header .header-bottom nav > a {
     font-size: 15px;
     font-family: Inter;
     text-decoration: none;
-    text-align: center;
     border-bottom: 2px solid #F9AA01;
 }
 
@@ -88,14 +103,25 @@ header .header-bottom nav .midias-sociais {
     bottom: 20px;
     left: 0;
     width: 100%;
-    
+
     display: flex;
     justify-content: center;
-    gap: 20px;
     margin-top: 40px;
-    /* border: 1px solid red; */
+    gap: 20px;
 }
 
-header .menu-usuarios{
-    display: none;
+header .menu-usuarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+    right: -66px;
+    top: 60px;
+    width: 66px;
+    height: 170px;
+    gap: 20px;
+    transition: right 0.4s;
 }

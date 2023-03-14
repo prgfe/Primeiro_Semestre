@@ -86,9 +86,9 @@
 
                 <!--Menu 3 pontinhos-->
                 <div class="alinhamento-between-center">
-                    <img class="tres" src="assets/icons/Pointers.svg" alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
+                    <img onclick="mostrarUser()" class="tres" src="assets/icons/Pointers.svg" alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
                 </div>
-                <div class="user-nav">
+                <div class="user-nav" id="menu-user">
                     <a href="">
                         <img class="user" src="assets/icons/User.svg" alt="user logo">
                     </a>
@@ -102,6 +102,14 @@
             </div>
         </div>
     </header>
+
+<script>
+            function mostrarUser() {
+            // pega a navbar pela id //
+            document.getElementById("menu-user").classList.toggle("mostrar-user");
+            }
+</script>
+
 </body>
 
 </html>

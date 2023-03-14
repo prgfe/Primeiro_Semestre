@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Gamer Tarde</title>
-    <link rel="stylesheet" href="css/styles-prof.css">
+    <link rel="stylesheet" href="./css/styles-prof.css">
 </head>
 
 <body>
@@ -42,12 +42,12 @@
         <div class="header-bottom">
             <div class="layout-grid alinhamento-between-center">
                 <!-- Menu Hamburger. Visível apenas no smartphone -->
-                <img src="assets/icons/Menu burguer real.svg" alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
+                <img onclick="mostrarMenu()" src="assets/icons/Menu burguer real.svg" alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
 
                 <img class="logo" src="assets/images/logotipo-gamer.png"
                     alt="Imagem logotipo gamer com um controle de vídeo game ao centro">
 
-                <nav class="menu">
+                <nav class="menu" id="menu">
                     <a href="">Início</a>
                     <a href="">Jogadores</a>
                     <a href="">Equipes</a>
@@ -78,22 +78,37 @@
                 </nav>
 
                 <!-- menu 3 pontinhos -->
-                <img src="assets/icons/pointers.svg" alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
+                <img onclick="menuUser()" src="assets/icons/pointers.svg" alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
 
-                <div class="menu-usuarios">
+                <div class="menu-usuarios" id="menu-user" >
                     <a href="">
-                        <img src="assets/icons/User.svg" alt="Ícone de perfil">
+                        <img src="assets/icons/user.svg" alt="Ícone de perfil">
                     </a>
                     <a href="">
-                        <img src="assets/icons/Bag.svg" alt="Ícone de sacola">
+                        <img src="assets/icons/bag.svg" alt="Ícone de sacola">
                     </a>
                     <a href="">
-                        <img src="assets/icons/Search.svg" alt="Ícone lupa de pesquisa">
+                        <img src="assets/icons/search.svg" alt="Ícone lupa de pesquisa">
                     </a>
                 </div>
             </div>
         </div>
     </header>
+
+
+    <script>
+        
+        function mostrarMenu() {
+            // pega a navbar pelo id
+            document.getElementById("menu").classList.toggle("mostrar-menu");
+        }
+        
+        function menuUser() {
+            // pega a navbar pelo id
+            document.getElementById("menu-user").classList.toggle("mostrar-user");
+        }
+
+    </script>
 </body>
 
 </html>
